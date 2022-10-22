@@ -1,9 +1,8 @@
 # transferencias
 
-A Clojure library designed to ... well, that part is up to you.
+Projeto da disciplina de Conceitos e linguagens de programação com o intuito de fazer as transferencias bancárias de um banco.
 
 ## Usage
-
 FIXME
 
 ## License

@@ -1,0 +1,8 @@
+-- xpto.up.sql
+
+CREATE TABLE IF NOT EXISTS invoices( 
+  code VARCHAR(256),
+  id SERIAL PRIMARY KEY,
+  title VARCHAR(256) NOT NULL,
+  timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP 
+)

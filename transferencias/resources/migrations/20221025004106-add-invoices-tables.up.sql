@@ -1,8 +1,7 @@
 -- xpto.up.sql
-
-CREATE TABLE IF NOT EXISTS invoices( 
-  code VARCHAR(256),
-  id SERIAL PRIMARY KEY,
-  title VARCHAR(256) NOT NULL,
-  timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP 
-)
+CREATE TABLE post (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `category` varchar(30) NOT NULL,
+  PRIMARY KEY (`id`)
+);

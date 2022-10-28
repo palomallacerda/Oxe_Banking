@@ -4,16 +4,17 @@
   :min-lein-version "2.0.0"
   :migratus {:store :database
              :migration-dir "migrations"
-             :db {:classname "org.postgresql.Driver"
-                  :subprotocol "postgresql"
-                  :subname "//localhost:3004/invoice_api_dev"
-                  :user "postgres"
-                  :password "postgres"}}
-  :dependencies [[org.clojure/clojure "1.10.0"]
+             :db {:classname "com.mysql.jdbc.Driver"
+                  :subprotocol "mysql"
+                  :subname "//localhost:3004/migratus"
+                  :user "mysql"
+                  :password "pwd"}}
+  :dependencies [[org.clojure/clojure "1.10.1"]
                  [compojure "1.6.1"]
-                 [migratus "1.3.5"]
-                 [org.postgresql/postgresql "42.1.4"]
-                 [ring/ring-defaults "0.3.2"]]
+                 [korma "0.4.3"]
+                 [mysql/mysql-connector-java "5.1.38"]
+                 [ring/ring-defaults "0.3.2"]
+                 [ring/ring-json "0.4.0"]]
   :plugins [[lein-ring "0.12.5"]
             [migratus-lein "0.7.3"]]
   :ring {:handler transferencias.handler/app}

@@ -1,0 +1,20 @@
+{
+    "cliente": {
+        "id": 2020,
+        "nome": "João Lucas"
+    },
+    "transferencias": [
+        {
+            "id": 123,
+            "descricacao": "Compra do livro online",
+            "tipo": "pix",
+            "valor": 50.5
+        },
+        {
+            "id": 124,
+            "descricacao": "Mensalidade escolar",
+            "tipo": "ted",
+            "valor": 1500.5
+        }
+    ]
+}

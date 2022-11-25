@@ -30,20 +30,20 @@
                         (let [dv (read-line)]
                             (println "VALOR")
                             (let [valor_transferencia_doc (read-line)]
-                                (def value (Double/parseDouble valor_transferencia_doc))
+                                (def value_doc (Double/parseDouble valor_transferencia_doc))
 
                                 (println "Nome do recebedor")
                                 (let [name_receptor (read-line)]
                                     (println "CPF do Recebedor")
                                     (let [cpf_receptor (read-line)]
                                         (cond
-                                            (<= value saldo_em_conta) ((println "Transferir" value "Para a conta" agencia"-"conta"-"dv)
+                                            (<= value_doc saldo_em_conta) ((println "Transferir" value_doc "Para a conta" agencia"-"conta"-"dv)
                                                 (println "TRANSFERENCIA BEM SUCEDIDA!")
                                                 (println "Saldo anterior da conta:" saldo_em_conta)
-                                                (println "Valor Transferido:" value)
-                                                (println "Novo saldo em conta:" (- saldo_em_conta value))
+                                                (println "Valor Transferido:" value_doc)
+                                                (println "Novo saldo em conta:" (- saldo_em_conta value_doc))
                                             )
-                                            (> value saldo_em_conta) (println "Tentativa de transferencia mal sucedida, Saldo inferior ao Valor da Transferencia")
+                                            (> value_doc saldo_em_conta) (println "Tentativa de transferencia mal sucedida, Saldo inferior ao Valor da Transferencia")
                                         ))))))))))
 
     (defn transferir_ted []
@@ -70,14 +70,13 @@
                         (let [dv (read-line)]
                             (println "VALOR")
                             (let [valor_transferencia_ted (read-line)]
-                                (def value (Double/parseDouble valor_transferencia_ted))
+                                (def value_ted (Double/parseDouble valor_transferencia_ted))
                                 (cond
-                                    (<= value saldo_em_conta) (
-                                        (println "Transferir" value "Para a conta" agencia"-"conta"-"dv)
+                                    (<= value_ted saldo_em_conta) ((println "Transferir" value_ted "Para a conta" agencia"-"conta"-"dv)
                                         (println "TRANSFERENCIA BEM SUCEDIDA!")
                                         (println "Saldo anterior da conta:" saldo_em_conta)
-                                        (println "Valor Transferido:" value)
-                                        (println "Novo saldo em conta:" (- saldo_em_conta value))
+                                        (println "Valor Transferido:" value_ted)
+                                        (println "Novo saldo em conta:" (- saldo_em_conta value_ted))
                                     )
                                     (> value saldo_em_conta) (println "Tentativa de transferencia mal sucedida, Saldo inferior ao Valor da Transferencia")
                                 ))))))))

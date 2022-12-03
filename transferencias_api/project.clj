@@ -4,7 +4,10 @@
   :min-lein-version "2.0.0"
   :dependencies [[org.clojure/clojure "1.10.0"]
                  [compojure "1.6.1"]
-                 [ring/ring-defaults "0.3.2"]]
+                 [ring/ring-defaults "0.3.2"]
+                 [io.pedestal/pedestal.service "0.5.7"]
+                 [io.pedestal/pedestal.route "0.5.7"]
+                 [io.pedestal/pedestal.jetty "0.5.7"]]
   :plugins [[lein-ring "0.12.5"]]
   :ring {:handler transferencias-api.handler/app}
   :profiles

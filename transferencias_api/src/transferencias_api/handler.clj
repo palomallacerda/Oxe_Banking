@@ -1,11 +1,9 @@
-(ns transferencias-api.handler
-  (:require [compojure.core :refer :all]
-            [compojure.route :as route]
-            [ring.middleware.defaults :refer [wrap-defaults site-defaults]]))
+(ns transferencias-api.handler 
+  (:require [io.pedestal.http.route :as route]
+            [io.pedestal.http :as http]))
 
-(defroutes app-routes
-  (GET "/" [] "Hello World")
-  (route/not-found "Not Found"))
 
-(def app
-  (wrap-defaults app-routes site-defaults))
+(def service-map {::http/routes routes
+                  ::http/port 9999
+                  ::http/type :jetty
+                  ::http/join? false})
